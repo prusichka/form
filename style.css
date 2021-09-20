@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'Conv_Gobold Regular Italic';
+	src: url('./fonts/fonts/Gobold Regular Italic.woff');
+	src: local('☺'), url('./fonts/fonts/Gobold Regular Italic.woff') format('woff'), url('fonts/Gobold Regular Italic.ttf') format('truetype'), url('fonts/Gobold Regular Italic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
 .img-link {
   width: 100px;
   border: none;
@@ -18,7 +28,7 @@
 .info h2,
 .info h3 {
   margin: 10px 0;
-  font-family: 'Gobold', sans-serif;
+  font-family: 'Conv_Gobold Regular Italic', sans-serif;
 }
 .info h1 {
   font-size: 46px;
