@@ -1,11 +1,23 @@
 @font-face {
-	font-family: 'Gobold';
-	src: url('./fonts/fonts/Gobold\ Regular\ Italic.eot');
-	src: local('☺'), url('./fonts/fonts/Gobold\ Regular\ Italic.woff') format('woff'), url('./fonts//fonts/Gobold\ Regular\ Italic.ttf') format('truetype'), url('./fonts/fonts/Gobold\ Regular\ Italic.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Gobold";
+  src: url("./fonts/fonts/Gobold\ Regular\ Italic.eot");
+  src: local("☺"),
+    url("./fonts/fonts/Gobold\ Regular\ Italic.woff") format("woff"),
+    url("./fonts//fonts/Gobold\ Regular\ Italic.ttf") format("truetype"),
+    url("./fonts/fonts/Gobold\ Regular\ Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Conv Italic";
+  src: url("./fonts/fonts/Gobold\ Bold\ Italic.woff");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src: url("./fonts/fonts/HelveticaNeueBold.woff");
+}
 
 .img-link {
   width: 100px;
@@ -26,11 +38,19 @@
 .info h1,
 .info h2,
 .info h3 {
-  margin: 10px 0;
-  font-family: 'Gobold', sans-serif;
+  margin: 5px 0;
+  font-family: "Gobold", sans-serif;
 }
 .info h1 {
-  font-size: 46px;
+  font-family: "Conv Italic", sans-serif;
+  font-size: 22px;
+}
+.info h2 {
+  font-size: 12px;
+}
+.info h3,
+.phone-num a {
+  font-family: "Helvetica Neue Bold", sans-serif;
 }
 .info {
   margin-left: 20px;
@@ -59,4 +79,39 @@
 }
 #form-inform input:focus {
   box-shadow: 2px 2px 5px rgb(0, 63, 0);
+}
+.phone-num {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.phone-num h3 {
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+.phone-num a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 55px;
+  margin: 0 auto;
+  text-align: center;
+}
+#btn-save {
+  margin: 10px auto;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
 }
