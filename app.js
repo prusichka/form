@@ -1,36 +1,38 @@
+let first;
+let second;
+let three;
 document
   .getElementById("input-text-one")
   .addEventListener("keypress", function (event) {
+    first = this.value + event.key;
     document.querySelector("#result-form h1").innerText =
       this.value + event.key;
   });
 document
   .getElementById("input-text-two")
   .addEventListener("keypress", function (event) {
+    second = this.value + event.key;
     document.querySelector("#result-form h2").innerText =
       this.value + event.key;
   });
 document
   .getElementById("input-text-three")
   .addEventListener("keypress", function (event) {
+    three = this.value + event.key;
     document.querySelector("#result-form h3").innerText =
       this.value + event.key;
   });
 
 const inform = document.getElementById("form-inform");
 const save = document.getElementById("btn-save");
-const htmlFile = document.querySelector("html").innerHTML;
-const resForm = document.getElementById("result-form").innerHTML;
-const el = document.querySelector("html").innerHTML;
-var resultat = new XMLSerializer().serializeToString(document)
+const download = document.getElementById("btn-download");
 
-save.addEventListener("click", () => {
+
+download.addEventListener("click", () => {
   if (confirm("Do you want to save the file?")) {
-    console.log(resultat);
     inform.classList.add("none");
-    fetch(
-      "data:text/html;charset=utf-8," + encodeURI("\uFEFF" + resultat)
-    )
+    const html = document.documentElement.innerHTML;
+    fetch("data:text/html;charset=utf-8," + encodeURI("\uFEFF" + html))
       .then((res) => res.blob())
       .then((res) => {
         const data = window.URL.createObjectURL(res);
