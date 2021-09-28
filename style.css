@@ -56,7 +56,7 @@
   margin-left: 20px;
   width: 100%;
 }
-#form-inform {
+.form-inform {
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -67,17 +67,17 @@
   width: 600px;
   padding: 0 100px;
 }
-#form-inform input {
+.form-inform input {
   margin: 10px 0;
   padding: 10px 0;
   outline: none;
   border: 1px solid rgba(128, 128, 128, 0.301);
   border-radius: 4px;
 }
-#form-inform input::placeholder {
+.form-inform input::placeholder {
   padding: 0 10px;
 }
-#form-inform input:focus {
+.form-inform input:focus {
   box-shadow: 2px 2px 5px rgb(0, 63, 0);
 }
 .phone-num {
@@ -114,4 +114,7 @@ input[type="file"] {
   border-radius: 5px;
   padding: 10px 25px;
   cursor: pointer;
+}
+.none {
+  display: none;
 }
