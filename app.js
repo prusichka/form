@@ -31,19 +31,14 @@ const download = document.getElementById("btn-download");
 download.addEventListener("click", () => {
   if (confirm("Do you want to save the file?")) {
     inform.classList.add("none");
-    const html = document.documentElement.innerHTML;
-    fetch("data:text/html;charset=utf-8," + encodeURI("\uFEFF" + html))
-      .then((res) => res.blob())
-      .then((res) => {
-        const data = window.URL.createObjectURL(res);
-        var link = document.createElement("a");
-        link.href = data;
-        link.download = "busines-card.html";
-        link.click();
-        setTimeout(function () {
-          window.URL.revokeObjectURL(data);
-        }, 100);
-        link.remove();
-      });
+    const resulForm = document.querySelector('#result-form').innerHTML;
+    const blobData = new Blob([resulForm], {
+      type: 'text/html'
+  });
+  const data = window.URL.createObjectURL(blobData);
+          var link = document.createElement("a");
+          link.href = data;
+          link.download = "busines-card.html";
+          link.click();
   } else return;
 });
